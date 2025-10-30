@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="green">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BINOVA - Sistema automatizado de clasificación de residuos húmedos y secos con sensores y Arduino." />
+  <title>BINOVA | Tecnología que separa, conciencia que une</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-circuits" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a href="#inicio" class="logo" aria-label="Inicio BINOVA">
+      <span class="logo-ring"></span>
+      <span class="logo-text">BINOVA</span>
+    </a>
+    <nav class="nav">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema"></button>
+      <a href="#sobre">Sobre</a>
+      <a href="#componentes">Componentes</a>
+      <a href="#galeria">Galería</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="section hero">
+      <div class="hero-inner reveal">
+        <div class="hero-logo" aria-hidden="true">
+          <div class="logo-circle">
+            <svg viewBox="0 0 150 150" class="logo-svg">
+              <defs>
+                <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#7CFF7C" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#00D084" stop-opacity="0.1"/>
+                </radialGradient>
+              </defs>
+              <circle cx="75" cy="75" r="62" fill="url(#glow)" stroke="#00ff88" stroke-width="2" opacity="0.6"/>
+              <g class="orbit">
+                <circle cx="75" cy="25" r="3" fill="#00ff88"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <h1 class="headline">Tecnología que separa, conciencia que une.</h1>
+        <p class="subhead">Sistema automatizado de clasificación de residuos húmedos y secos controlado por Arduino.</p>
+        <div class="cta">
+          <a href="#galeria" class="btn primary">Ver funcionamiento</a>
+          <a href="docs/BINOVA_Documentacion.pdf" class="btn ghost" download>Descargar documentación</a>
+        </div>
+      </div>
+      <div class="hero-waves" aria-hidden="true"></div>
+    </section>
+
+    <!-- Sobre el Proyecto -->
+    <section id="sobre" class="section about">
+      <div class="container">
+        <h2 class="section-title reveal">Sobre el proyecto</h2>
+        <p class="section-desc reveal">BINOVA detecta objetos con un sensor ultrasónico, mide su humedad y acciona un servomotor para dirigirlos a la sección correcta. Todo coordinado por un Arduino UNO.</p>
+        <div class="process reveal">
+          <div class="step">
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M8 32h48" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="10" fill="currentColor"/></svg>
+            </div>
+            <p>Detección con sensor ultrasónico</p>
+          </div>
+          <div class="step arrow" aria-hidden="true"></div>
+          <div class="step">
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="18" y="18" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M22 32h20" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <p>Lectura de humedad</p>
+          </div>
+          <div class="step arrow" aria-hidden="true"></div>
+          <div class="step">
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M12 32h40" stroke="currentColor" stroke-width="2"/><path d="M52 32l-8-6v12l8-6z" fill="currentColor"/></svg>
+            </div>
+            <p>Acción del servomotor</p>
+          </div>
+        </div>
+        <blockquote class="tagline reveal">“Automatizamos el reciclaje, inspiramos el cambio.”</blockquote>
+      </div>
+    </section>
+
+    <!-- Componentes -->
+    <section id="componentes" class="section components">
+      <div class="container">
+        <h2 class="section-title reveal">Componentes</h2>
+        <div class="cards-grid">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="36" rx="6" fill="currentColor"/><circle cx="26" cy="30" r="4" fill="#0f172a"/><circle cx="38" cy="30" r="4" fill="#0f172a"/></svg>
+            </div>
+            <h3>Arduino UNO</h3>
+            <p class="card-hover">Microcontrolador que coordina sensores y actuadores.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M8 36h48M8 28h48" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="32" r="4" fill="currentColor"/></svg>
+            </div>
+            <h3>Sensor ultrasónico</h3>
+            <p class="card-hover">Detecta presencia y distancia de objetos.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="20" y="14" width="24" height="36" rx="8" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="32" cy="42" r="4" fill="currentColor"/></svg>
+            </div>
+            <h3>Sensor de humedad</h3>
+            <p class="card-hover">Mide la humedad para clasificar húmedo/seco.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M32 20v-6 M32 50v-6 M20 32h-6 M50 32h-6" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Servomotor</h3>
+            <p class="card-hover">Mueve la compuerta para dirigir los residuos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería / Demo -->
+    <section id="galeria" class="section gallery">
+      <div class="container">
+        <h2 class="section-title reveal">Galería / Demo</h2>
+        <div class="carousel3d reveal" aria-roledescription="carrusel" aria-label="Galería BINOVA">
+          <button class="carousel-btn prev" aria-label="Anterior"></button>
+          <div class="carousel-stage">
+            <figure class="slide" aria-label="Foto 1">
+              <img src="prototipo.jpg" alt="Prototipo BINOVA 1" />
+              <figcaption>Prototipo BINOVA</figcaption>
+            </figure>
+            <figure class="slide" aria-label="Foto 2">
+              <img src="cableado.jpg" alt="Sensores y cableado" />
+              <figcaption>Sensores y cableado</figcaption>
+            </figure>
+          </div>
+          <button class="carousel-btn next" aria-label="Siguiente"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="section team">
+      <div class="container">
+        <h2 class="section-title reveal">Equipo</h2>
+        <div class="team-grid">
+          <article class="member reveal">
+            <div class="avatar"><img src="magali.jpg" alt="Magalí Ramírez" /></div>
+            <h3>Magalí Ramírez</h3>
+            <p class="role">Hardware</p>
+          </article>
+          <article class="member reveal">
+            <div class="avatar"><img src="tatiana.jpg" alt="Tatiana Ocampos" /></div>
+            <h3>Tatiana Ocampos</h3>
+            <p class="role">Programación</p>
+          </article>
+          <article class="member reveal">
+            <div class="avatar"><img src="yanina.jpg" alt="Yanina Miranda" /></div>
+            <h3>Yanina Miranda</h3>
+            <p class="role">Diseño</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto / Créditos -->
+    <section id="contacto" class="section contact">
+      <div class="container">
+        <h2 class="section-title reveal">Contacto y créditos</h2>
+        <div class="contact-grid reveal">
+          <a class="contact-item" href="mailto:contacto@binova.org" aria-label="Correo">
+            <span class="ci-icon" aria-hidden="true">✉️</span>
+            <span>contacto@binova.org</span>
+          </a>
+          <a class="contact-item" href="#" aria-label="Instagram">
+            <span class="ci-icon" aria-hidden="true">📷</span>
+            <span>@binova_project</span>
+          </a>
+          <a class="contact-item" href="#" aria-label="GitHub">
+            <span class="ci-icon" aria-hidden="true">💻</span>
+            <span>github.com/binova</span>
+          </a>
+          <div class="contact-item" aria-label="QR">
+            <span class="ci-icon" aria-hidden="true">🔗</span>
+            <span>QR a la demo</span>
+          </div>
+        </div>
+        <p class="final-phrase reveal">Binova: innovación, sostenibilidad y educación tecnológica.</p>
+      </div>
+    </section>
+  </main>
+
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> BINOVA — Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
